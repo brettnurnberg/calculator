@@ -48,9 +48,14 @@
             this.button_divide = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.calc_value = new System.Windows.Forms.Label();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button_clear = new System.Windows.Forms.Button();
+            this.button_clearall = new System.Windows.Forms.Button();
+            this.button_plusminus = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -66,8 +71,7 @@
             this.flowLayoutPanel1.Controls.Add(this.button_3);
             this.flowLayoutPanel1.Controls.Add(this.button_0);
             this.flowLayoutPanel1.Controls.Add(this.button_dot);
-            this.flowLayoutPanel1.Controls.Add(this.button_equals);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 62);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 112);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(148, 193);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -176,7 +180,7 @@
             this.button_0.Font = this.button_7.Font;
             this.button_0.Location = new System.Drawing.Point(3, 147);
             this.button_0.Name = "button_0";
-            this.button_0.Size = new System.Drawing.Size(42, 42);
+            this.button_0.Size = new System.Drawing.Size(90, 42);
             this.button_0.TabIndex = 9;
             this.button_0.Text = "0";
             this.button_0.UseVisualStyleBackColor = true;
@@ -185,7 +189,7 @@
             // button_dot
             // 
             this.button_dot.Font = this.button_7.Font;
-            this.button_dot.Location = new System.Drawing.Point(51, 147);
+            this.button_dot.Location = new System.Drawing.Point(99, 147);
             this.button_dot.Name = "button_dot";
             this.button_dot.Size = new System.Drawing.Size(42, 42);
             this.button_dot.TabIndex = 10;
@@ -196,7 +200,7 @@
             // button_equals
             // 
             this.button_equals.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_equals.Location = new System.Drawing.Point(99, 147);
+            this.button_equals.Location = new System.Drawing.Point(169, 63);
             this.button_equals.Name = "button_equals";
             this.button_equals.Size = new System.Drawing.Size(42, 42);
             this.button_equals.TabIndex = 11;
@@ -210,7 +214,7 @@
             this.flowLayoutPanel2.Controls.Add(this.button_minus);
             this.flowLayoutPanel2.Controls.Add(this.button_multiply);
             this.flowLayoutPanel2.Controls.Add(this.button_divide);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(166, 62);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(166, 112);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(50, 193);
             this.flowLayoutPanel2.TabIndex = 2;
@@ -278,23 +282,69 @@
             this.calc_value.Size = new System.Drawing.Size(0, 24);
             this.calc_value.TabIndex = 0;
             // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.button_clear);
+            this.flowLayoutPanel3.Controls.Add(this.button_clearall);
+            this.flowLayoutPanel3.Controls.Add(this.button_plusminus);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(12, 60);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(148, 46);
+            this.flowLayoutPanel3.TabIndex = 4;
+            // 
+            // button_clear
+            // 
+            this.button_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_clear.Location = new System.Drawing.Point(3, 3);
+            this.button_clear.Name = "button_clear";
+            this.button_clear.Size = new System.Drawing.Size(42, 42);
+            this.button_clear.TabIndex = 0;
+            this.button_clear.Text = "CE";
+            this.button_clear.UseVisualStyleBackColor = true;
+            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
+            // 
+            // button_clearall
+            // 
+            this.button_clearall.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_clearall.Location = new System.Drawing.Point(51, 3);
+            this.button_clearall.Name = "button_clearall";
+            this.button_clearall.Size = new System.Drawing.Size(42, 42);
+            this.button_clearall.TabIndex = 1;
+            this.button_clearall.Text = "C";
+            this.button_clearall.UseVisualStyleBackColor = true;
+            this.button_clearall.Click += new System.EventHandler(this.button_clearall_Click);
+            // 
+            // button_plusminus
+            // 
+            this.button_plusminus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_plusminus.Location = new System.Drawing.Point(99, 3);
+            this.button_plusminus.Name = "button_plusminus";
+            this.button_plusminus.Size = new System.Drawing.Size(42, 42);
+            this.button_plusminus.TabIndex = 2;
+            this.button_plusminus.Text = "±";
+            this.button_plusminus.UseVisualStyleBackColor = true;
+            this.button_plusminus.Click += new System.EventHandler(this.button_plusminus_Click);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(227, 267);
+            this.ClientSize = new System.Drawing.Size(227, 317);
+            this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.button_equals);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Calculator";
-            this.Text = "Form1";
+            this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -321,6 +371,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label calc_value;
         private System.Windows.Forms.Button button_equals;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Button button_clear;
+        private System.Windows.Forms.Button button_clearall;
+        private System.Windows.Forms.Button button_plusminus;
     }
 }
 

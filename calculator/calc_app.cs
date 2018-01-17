@@ -13,7 +13,7 @@ namespace calculator
 {
     public partial class Calculator : Form
     {
-        public enum operators
+        private enum operators
         {
             DOT,
             ADD,
@@ -23,7 +23,7 @@ namespace calculator
             EQUALS
         };
 
-        private double run_total;
+        private double total_value;
         private double current_value;
 
         public Calculator()
@@ -31,14 +31,14 @@ namespace calculator
             InitializeComponent();
         }
 
-        public void eh_digit(int value)
+        private void eh_digit(int value)
         {
             string temp;
             temp = calc_value.Text + value.ToString();
             calc_value.Text = temp;
         }
 
-        public void eh_operator(operators value)
+        private void eh_operator(operators value)
         {
             string text;
             text = calc_value.Text;
@@ -150,6 +150,21 @@ namespace calculator
         }
 
         private void button_equals_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_clear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_clearall_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_plusminus_Click(object sender, EventArgs e)
         {
 
         }
